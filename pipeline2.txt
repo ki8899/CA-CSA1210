@@ -1,0 +1,54 @@
+#include<stdio.h>
+void main(){
+int counter=0;
+int input;
+int num1,num2;
+int op;
+int res;
+float ins;
+float performance_measure;
+printf("\n Enter 1st value: ");
+scanf("%d",&num1);
+counter+=1;
+printf("\n Enter the 2nd value: ");
+scanf("%d",&num2);
+counter+=1;
+printf("\n Enter the option: \n1)Addition\n2)Subraction\n3)Multiplication\n4)Division\t: ");
+scanf("%d",&op);
+switch(op){
+case 1:
+	printf("\n-->Performing addition operation\n");
+	res=num1+num2;
+	counter+=1;
+	break;
+case 2:
+	printf("\n-->Performing subraction operation\n");
+	res=num1-num2;
+	counter+=1;
+	break;
+case 3:
+	printf("\n-->Performing multiplication operation\n");
+	res=num1*num2;
+	counter+=1;
+	break;
+case 4:
+	if(num2==0){
+	printf("\n-->Denominator can't be zero\n");
+	}
+	else{
+	printf("\n-->Performing division operation\n");
+	res=num1/num2;
+	counter+=1;
+	break;
+	}
+default: 
+	printf("\nInvalid case...\n");
+	counter+=1;
+	break;
+}
+printf("\nCYCLE VALUE IS : %d\n",counter);
+printf("\nEnter the no.instruction\t:");
+scanf("%f",&ins);
+performance_measure=ins/counter;
+printf("\n Performance Measure is: %0.3f",performance_measure);
+}
